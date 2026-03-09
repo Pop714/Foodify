@@ -36,6 +36,6 @@ fun HomeScreen(
         viewModel::loadData,
         viewModel::onMealClicked,
         viewModel::filterAccordingType,
-        uiState
+        uiState  
     )
 }

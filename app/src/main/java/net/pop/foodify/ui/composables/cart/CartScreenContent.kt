@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import net.pop.foodify.model.loacl.CartEntity
 import net.pop.foodify.ui.theme.Background
+import net.pop.foodify.ui.theme.PrimaryTextColor
 
 @Composable
 fun CartScreenContent(
@@ -49,6 +50,7 @@ fun CartScreenContent(
             is CartUiState.Empty -> {
                 Text(
                     text = "Your cart is empty.",
+                    color = PrimaryTextColor,
                     style = MaterialTheme.typography.titleMedium,
                     modifier = Modifier.align(Alignment.Center)
                 )
@@ -71,6 +73,7 @@ fun CartScreenContent(
                             text = "Shopping Cart",
                             style = MaterialTheme.typography.headlineMedium,
                             fontWeight = FontWeight.Bold,
+                            color = PrimaryTextColor,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                     }

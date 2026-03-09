@@ -14,8 +14,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import net.pop.foodify.ui.theme.Black
+import net.pop.foodify.ui.theme.PrimaryTextColor
 
 @Composable
 fun FilterChipRow(
@@ -31,10 +33,11 @@ fun FilterChipRow(
                 Text(
                     text = item,
                     style = MaterialTheme.typography.bodyMedium,
+                    color = PrimaryTextColor,
                     modifier = Modifier
                         .clip(RoundedCornerShape(50))
                         .clickable { onChipClick(item) }
-                        .border(1.dp, Black, RoundedCornerShape(50))
+                        .border(1.dp, PrimaryTextColor, RoundedCornerShape(50))
                         .padding(horizontal = 16.dp, vertical = 8.dp)
                 )
             }

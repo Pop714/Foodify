@@ -33,7 +33,6 @@ fun FloatingBottomNavigationBar(
 ) {
     val items = listOf(
         BottomNavItem.Home,
-        BottomNavItem.Search,
         BottomNavItem.Favorite,
         BottomNavItem.Cart
     )

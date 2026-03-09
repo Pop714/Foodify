@@ -47,7 +47,6 @@ fun DetailsScreen(
             onDismiss = { viewModel.closeCartPopup() },
             onAddToCart = { ingredient, measure ->
                 viewModel.addToCart(ingredient, measure)
-//                viewModel.closeCartPopup()
             }
         )
     }

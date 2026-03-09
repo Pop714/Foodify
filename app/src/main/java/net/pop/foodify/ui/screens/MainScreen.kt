@@ -1,15 +1,11 @@
 package net.pop.foodify.ui.screens
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -19,19 +15,27 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import net.pop.foodify.ui.composables.helpers.FloatingBottomNavigationBar
 import net.pop.foodify.uils.BottomNavItem
+import net.pop.foodify.uils.isInternetConnected
 
 @Composable
 fun MainScreen() {
+    val context = LocalContext.current
+    val connectivityStatus = isInternetConnected(context)
+    val startDestination =
+        if (connectivityStatus) BottomNavItem.Home.route else BottomNavItem.Favorite.route
+
     val navController = rememberNavController()
-    MainScreenContent(navController)
+    MainScreenContent(navController, startDestination)
 }
 
 @Composable
-fun MainScreenContent(navController: NavHostController) {
+fun MainScreenContent(navController: NavHostController, startDestination: String) {
+
+
     Box(modifier = Modifier.fillMaxSize()) {
         NavHost(
             navController = navController,
-            startDestination = BottomNavItem.Home.route,
+            startDestination = startDestination,
             modifier = Modifier.fillMaxSize()
         ) {
             composable(BottomNavItem.Home.route) {
@@ -39,14 +43,6 @@ fun MainScreenContent(navController: NavHostController) {
                     onMealClicked = { selectedMealId ->
                         navController.navigate("details/$selectedMealId")
                     }
-                )
-            }
-            composable(BottomNavItem.Search.route) {
-                // Search Screen
-                DummyScreen(
-                    "Search",
-                    Color(0xFFFF9800),
-                    Color(0xFFF44336)
                 )
             }
             composable(BottomNavItem.Favorite.route) {
@@ -76,21 +72,6 @@ fun MainScreenContent(navController: NavHostController) {
     }
 }
 
-@Composable
-fun DummyScreen(title: String, color1: Color, color2: Color) {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Brush.verticalGradient(listOf(color1, color2))),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = title,
-            style = MaterialTheme.typography.headlineLarge,
-            color = Color.White
-        )
-    }
-}
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable

@@ -5,10 +5,10 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import net.pop.foodify.network.MealApi
-import net.pop.foodify.repos.network.MealRepository
-import net.pop.foodify.repos.network.MealRepositoryImpl
-import net.pop.foodify.uils.Constants
+import net.pop.foodify.network.RecipeApi
+import net.pop.foodify.data.repos.MealRepository
+import net.pop.foodify.domain.repos.MealRepositoryImpl
+import net.pop.foodify.utils.Constants
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
@@ -28,8 +28,8 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideMealApi(retrofit: Retrofit): MealApi {
-        return retrofit.create(MealApi::class.java)
+    fun provideMealApi(retrofit: Retrofit): RecipeApi {
+        return retrofit.create(RecipeApi::class.java)
     }
 }
 

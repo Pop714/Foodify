@@ -1,33 +1,168 @@
-# Foodify - Modern Android Recipe App
+# 🍳 Foodify
 
-Foodify is a feature-rich, beautifully animated Android application built entirely with **Jetpack Compose** and modern Android development practices. It consumes data from [TheMealDB API](https://www.themealdb.com/api.php) to provide users with thousands of recipes, categorized by area, ingredient, and type. 
+Foodify is a modern Android recipe and meal-planning application built entirely with Kotlin and Jetpack Compose.  
+The project focuses on premium UI/UX, scalable architecture, smooth animations, and offline-first functionality to deliver a polished and immersive cooking experience.
 
-Beyond discovering recipes, Foodify allows users to curate a personal list of favorite meals and intelligently extract recipe ingredients into a local Shopping Cart.
+Designed with a custom warm editorial-inspired design system, Foodify combines elegant visuals with modern Android engineering practices.
 
-## Key Features
+---
 
-* **Smart Discoverability:** Filter meals seamlessly by Area, Category, or Ingredient using animated, interactive filter chips.
-* **Detailed Recipe Pages:** View high-quality meal imagery, exact ingredient measurements, step-by-step instructions, and embedded YouTube tutorials.
-* **Favorites System:** Save your go-to meals locally. The UI instantly reacts to database changes using Kotlin Flows.
-* **Smart Shopping Cart:** Extract specific ingredients and measurements from a recipe via a beautiful popup dialog and add them to a dedicated, interactive shopping list.
-* **Fluid Animations:** Features premium UI touches including crossfade screen transitions, animated bottom navigation bars, and reactive button states.
-* **Native Sharing:** Easily share recipe links with friends and family using Android's native share sheet.
+# ✨ Features
 
-## Tech Stack & Architecture
+## 🎨 Premium Editorial Design
+- Warm editorial-inspired UI system
+- Custom color palette and typography
+- Smooth micro-interactions and transitions
+- Floating bottom navigation with hide-on-scroll behavior
+- Overlapping bottom-sheet styled layouts
 
-Foodify is built utilizing **Clean Architecture** principles and the **MVVM (Model-View-ViewModel)** design pattern to ensure separation of concerns, testability, and scalable code.
+---
 
-* **UI:** [Jetpack Compose](https://developer.android.com/jetpack/compose) - Modern, declarative native UI toolkit.
-* **Language:** [Kotlin](https://kotlinlang.org/)
-* **Asynchronous Programming:** [Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) & [Flows](https://kotlinlang.org/docs/flow.html) - For handling background threads and reactive UI states.
-* **Dependency Injection:** [Dagger-Hilt](https://dagger.dev/hilt/) - For robust, compile-time dependency injection.
-* **Local Database:** [Room](https://developer.android.com/training/data-storage/room) - SQLite object mapping library for the Favorites and Shopping Cart systems.
-* **Network:** [Retrofit](https://square.github.io/retrofit/) & Gson - For making type-safe REST API calls.
-* **Image Loading:** [Coil](https://coil-kt.github.io/coil/) - For fast, lightweight image loading with Compose support.
-* **Navigation:** Jetpack Compose Navigation - For routing and passing arguments between screens.
+## 🍽️ Recipe Discovery
+- Browse meals by category
+- High-quality recipe imagery
+- Detailed cooking instructions
+- Step-by-step recipe timeline
+- Smooth navigation between screens
 
-## Project Setup & Installation
+---
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/Pop714/Foodify.git](https://github.com/Pop714/Foodify.git)
+## 🛒 Smart Grocery Cart
+- Automatically groups ingredients by recipe
+- Offline-first cart management
+- Animated check interactions
+- Persistent local storage with Room
+- Strikethrough completion animations
+
+---
+
+## ❤️ Favorites System
+- Save favorite meals locally
+- Quick access to bookmarked recipes
+- Persistent offline support
+
+---
+
+## ⚡ Optimized User Experience
+- Custom navigation animations
+- Reactive state management using StateFlow
+- Optimized Compose recompositions
+- Smooth scrolling and responsive layouts
+
+---
+
+# 🏗️ Architecture
+
+Foodify follows modern Android development principles using:
+
+- Clean Architecture
+- MVI (Model-View-Intent)
+- Repository Pattern
+- Reactive UI State Management
+- Offline-First Design
+
+---
+
+# 📂 Project Structure
+
+```text
+app/
+├── presentation/
+├── domain/
+├── data/
+├── core/
+```
+
+---
+
+# 🛠️ Tech Stack
+
+## Core Technologies
+- Kotlin
+- Coroutines
+- StateFlow
+- Jetpack Compose
+
+## Architecture
+- Clean Architecture
+- MVI Pattern
+- Repository Pattern
+
+## Jetpack Libraries
+- Navigation Compose
+- ViewModel
+- Room Database
+
+## Dependency Injection
+- Dagger Hilt
+
+## Networking
+- Retrofit
+- OkHttp
+
+## Image Loading
+- Coil
+
+## API
+- TheMealDB API
+
+---
+
+# 🧠 Engineering Challenges
+
+- Built scalable UI state management using MVI architecture
+- Implemented an offline-first grocery cart system using Room and Flow
+- Optimized Compose recompositions for improved performance
+- Designed reusable and modular Compose UI components
+- Added custom navigation animations and transitions
+
+---
+
+# 📱 Screenshots
+
+| Home Screen | Recipe Details | Grocery Cart |
+|-------------|----------------|--------------|
+| ![Home](https://github.com/user-attachments/assets/2a76d7b2-b43e-4fff-a973-c24bfd41ddb3) | ![Details](https://github.com/user-attachments/assets/d5704b9d-7104-4b6c-9579-49e57c70162c) | ![Cart](https://github.com/user-attachments/assets/e0928f81-a1d2-46a2-942e-0433ad3a51d9) |
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+- Android Studio Hedgehog or newer
+- JDK 17+
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/Foodify.git
+```
+
+Open the project in Android Studio and run the application on an emulator or physical device.
+
+---
+
+# 🔮 Future Improvements
+
+- Multi-module architecture
+- Tablet and foldable support
+- Recipe recommendation engine
+- Cloud synchronization
+- AI-powered meal suggestions
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+Developed by Albraa Alhrairy

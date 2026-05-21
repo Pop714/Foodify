@@ -122,7 +122,7 @@ app/
 
 | Home Screen | Recipe Details | Grocery Cart |
 |-------------|----------------|--------------|
-| ![Home](https://github.com/user-attachments/assets/2a76d7b2-b43e-4fff-a973-c24bfd41ddb3) | ![Details](https://github.com/user-attachments/assets/d5704b9d-7104-4b6c-9579-49e57c70162c) | ![Cart](https://github.com/user-attachments/assets/e0928f81-a1d2-46a2-942e-0433ad3a51d9) |
+| ![Home](https://github.com/user-attachments/assets/e0928f81-a1d2-46a2-942e-0433ad3a51d9) | ![Details](https://github.com/user-attachments/assets/2a76d7b2-b43e-4fff-a973-c24bfd41ddb3) | ![Cart](https://github.com/user-attachments/assets/d5704b9d-7104-4b6c-9579-49e57c70162c) |
 
 ---
 

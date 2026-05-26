@@ -13,4 +13,5 @@ interface MealRepository {
     suspend fun getMealsByCategory(): List<MealsResponse>
     suspend fun filterMealsWithType(type: String, filterText: String): List<MealsResponse>
     suspend fun getMealById(id: String): MealResponse
+    suspend fun getRandomMeal(): MealResponse
 }

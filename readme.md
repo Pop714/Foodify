@@ -68,9 +68,11 @@ Foodify follows modern Android development principles using:
 ```text
 app/
 ├── presentation/
+├── di/
+├── network/
 ├── domain/
 ├── data/
-├── core/
+├── utils/
 ```
 
 ---

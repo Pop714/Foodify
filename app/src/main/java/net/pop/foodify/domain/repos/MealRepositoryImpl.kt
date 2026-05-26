@@ -81,4 +81,10 @@ class MealRepositoryImpl @Inject constructor(
             api.getMealById(id)
         }
     }
+
+    override suspend fun getRandomMeal(): MealResponse {
+        return coroutineScope {
+            api.getRandomMeal()
+        }
+    }
 }

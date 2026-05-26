@@ -26,6 +26,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import androidx.navigation.navDeepLink
 import net.pop.foodify.presentation.navigation.BottomNavItem
 import net.pop.foodify.presentation.screens.cart.CartScreen
 import net.pop.foodify.presentation.screens.details.DetailsScreen
@@ -38,7 +39,6 @@ fun MainContent(
     modifier: Modifier = Modifier,
     startDestination: String
 ) {
-
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
@@ -98,6 +98,9 @@ fun MainContent(
             composable(
                 route = "details/{mealId}",
                 arguments = listOf(navArgument("mealId") { type = NavType.StringType }),
+                deepLinks = listOf(
+                    navDeepLink { uriPattern = "foodify://details/{mealId}" }
+                ),
                 enterTransition = {
                     slideIntoContainer(
                         towards = AnimatedContentTransitionScope.SlideDirection.Left,

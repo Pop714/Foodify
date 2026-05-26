@@ -25,4 +25,6 @@ interface RecipeApi {
     suspend fun getMealsByIngredient(@Query("i") ingredient: String): MealsResponse
     @GET("lookup.php")
     suspend fun getMealById(@Query("i") mealId: String): MealResponse
+    @GET("random.php")
+    suspend fun getRandomMeal(): MealResponse
 }

@@ -4,6 +4,9 @@ plugins {
     // hilt & ksp
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
+    // Firebase
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -18,8 +21,8 @@ android {
         applicationId = "net.pop.foodify"
         minSdk = 28
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -83,4 +86,10 @@ dependencies {
     implementation(libs.androidx.work.runtime.ktx)
     implementation(libs.androidx.hilt.work)
     ksp(libs.androidx.hilt.compiler)
+    // firebase remote config & Services & Crashlytics & Messaging
+    implementation(libs.firebase.config.ktx)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.messaging)
 }

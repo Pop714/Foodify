@@ -22,10 +22,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="net.pop.foodify" />
+                  <option name="mobileSdkAppId" value="1:921339430812:android:30642afa4fa140189eea59" />
+                  <option name="projectId" value="abbas-5208b" />
+                  <option name="projectNumber" value="921339430812" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
